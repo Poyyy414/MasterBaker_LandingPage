@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #1a0f05;
+  color: #f5deb3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  transition: all 0.2s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0804;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a2f14;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cd853f;
+}
