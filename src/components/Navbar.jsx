@@ -8,12 +8,10 @@ export default function Navbar() {
       fontFamily: "'Crimson Text', Georgia, serif",
     }}>
       <div style={{
-        maxWidth: 1200, margin: "0 auto",
-        padding: "0 2rem",
+        maxWidth: 1200, margin: "0 auto", padding: "0 2rem",
         display: "flex", alignItems: "center", justifyContent: "space-between",
         height: 70,
       }}>
-        {/* Logo */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
           <div style={{
             width: 38, height: 38, borderRadius: "50%",
@@ -21,33 +19,38 @@ export default function Navbar() {
             display: "flex", alignItems: "center", justifyContent: "center",
             fontSize: 18, border: "2px solid rgba(205,133,63,0.4)",
           }}>🥧</div>
-          <span style={{
-            fontFamily: "'Playfair Display', Georgia, serif",
-            fontSize: 22, fontWeight: 700, color: "#f5deb3",
-            letterSpacing: "0.02em",
-          }}>
+          <span style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 22, fontWeight: 700, color: "#f5deb3" }}>
             Master<span style={{ color: "#cd853f" }}>Baker</span>
           </span>
+          {/* Beta pill */}
+          <span style={{
+            background: "rgba(205,133,63,0.15)", border: "1px solid rgba(205,133,63,0.3)",
+            borderRadius: 20, padding: "2px 10px",
+            color: "#cd853f", fontSize: 11, fontFamily: "Georgia, serif", letterSpacing: "0.05em",
+          }}>BETA</span>
         </div>
 
-        {/* Desktop links */}
-        <div style={{ display: "flex", gap: 32, alignItems: "center" }}>
-          {["Home", "Features", "Leaderboard", "Download"].map(link => (
+        <div style={{ display: "flex", gap: 24, alignItems: "center" }}>
+          {["Home", "Features"].map(link => (
             <a key={link} href={`#${link.toLowerCase()}`} style={{
-              color: link === "Download" ? "#2a180a" : "#d2b48c",
-              textDecoration: "none",
-              fontSize: 15,
-              fontFamily: "'Crimson Text', serif",
-              fontWeight: link === "Download" ? 600 : 400,
-              background: link === "Download" ? "linear-gradient(135deg, #cd853f, #a0522d)" : "none",
-              padding: link === "Download" ? "8px 20px" : "4px 0",
-              borderRadius: link === "Download" ? 6 : 0,
-              transition: "all 0.2s",
-              letterSpacing: "0.02em",
-            }}>
-              {link}
-            </a>
+              color: "#d2b48c", textDecoration: "none", fontSize: 15,
+              fontFamily: "'Crimson Text', serif", transition: "color 0.2s",
+            }}>{link}</a>
           ))}
+          <a
+            href="masterbaker.apk"
+            download="MasterBaker.apk"
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 8,
+              background: "linear-gradient(135deg, #3ddc84, #1a9050)",
+              color: "#fff", textDecoration: "none",
+              padding: "8px 20px", borderRadius: 6,
+              fontSize: 14, fontWeight: 700,
+              fontFamily: "'Crimson Text', serif",
+            }}
+          >
+            🧪 Download Beta
+          </a>
         </div>
       </div>
     </nav>
